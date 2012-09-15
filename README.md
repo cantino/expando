@@ -36,7 +36,14 @@ Option 1: Works in IE 9, Chrome, Firefox, Safari.
           <expando>
             <initial><a>hike</a>.</initial>
             <expanded>
-              explore the hills surrounding San Francisco.
+              explore the
+              <expando>
+                <initial>hills</initial>
+                <expanded>
+                  hills, valleys, and mountains
+                </expanded>
+              </expando>
+              surrounding San Francisco.
             </expanded>
           </expando>
         </div>
@@ -53,6 +60,10 @@ Option 2: Works on the above, plus IE 8.
         <div class='break'></div>
       </span>
     </span>
+
+If you'd like to write in the first format, but deploy in the second (for IE8 support), check out the `bin/rewrite.rb` script:
+
+    bin/rewrite.rb example.html example-processed.html
 
 You can add `<div class='break'></div>` to create line breaks that expand with their `<expanded>` block:
 
