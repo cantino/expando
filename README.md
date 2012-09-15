@@ -1,7 +1,7 @@
 # jquery.expando
 ## A jQuery plugin for making text that grows on you
 
-To see this plugin in action, checkout [andrewcantino.com](http://andrewcantino.com).
+To see this plugin in action, check out [andrewcantino.com](http://andrewcantino.com).
 
 # Usage
 
@@ -21,7 +21,7 @@ Option 1: Works in IE 9, Chrome, Firefox, Safari.
           $(function() {
             $(".about-me").expando();
           });
-    		</script>
+        </script>
       </head>
 
       <body>
@@ -65,6 +65,8 @@ If you'd like to write in the first format, but deploy in the second (for IE8 su
 
     bin/rewrite.rb example.html example-processed.html
 
+## Expanding line breaks
+
 You can add `<div class='break'></div>` to create line breaks that expand with their `<expanded>` block:
 
     I like to
@@ -76,11 +78,15 @@ You can add `<div class='break'></div>` to create line breaks that expand with t
       </expanded>
     </expando>
 
+# Events and programmatic control
+
 Expanded blocks trigger a jQuery `expando.expanded` event that you can bind to for custom behavior.
 
 You can programmatically expand an `expander` by calling `expando('expand')` on it, like so: `$(".about-me expander").expando('expand')`
 
-You could expand everything with: `$(".about-me").expando("expandAll")`
+You can expand everything with: `$(".about-me").expando("expandAll")`
+
+# Customization
 
 Customize colors and spacing with options:
 
@@ -88,4 +94,6 @@ Customize colors and spacing with options:
       expansionStartColor: "#EF7A28",
       expansionEndColor: "#444",
       expansionBreakMargin: "25px",
+      colorFadeTime: 2000, //ms
+      breakOpenTime: 300 //ms
     });
