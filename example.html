@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+    <script src='jquery.expando.js'></script>
+    <link rel="stylesheet" type="text/css" href="expando.css" media="all" />
+
+    <script>
+      $(function() {
+        $(".about-me, .example2, .example3").expando();
+      });
+		</script>
+  </head>
+  <body>
+    <div class='about-me'>
+      I like to
+      <expando>
+        <initial><a>program</a> and</initial>
+        <expanded>
+          program, for example in JavaScript and Ruby.  I also like to
+        </expanded>
+      </expando>
+      <expando>
+        <initial><a>hike</a>.</initial>
+        <expanded>
+          explore the hills surrounding San Francisco.
+        </expanded>
+      </expando>
+    </div>
+
+    <div class='example2'>
+      I like to
+      <span class='expando'>
+        <span class='initial'><a>program</a>.</span>
+        <span class='expanded'>
+          program, for example in JavaScript and Ruby.
+          <div class='break'></div>
+        </span>
+      </span>
+    </div>
+
+    <div class='example3'>
+      I like to
+      <expando>
+        <initial><a>program</a>.</initial>
+        <expanded>
+          program, for example in JavaScript and Ruby.
+          <div class='break'></div>
+        </expanded>
+      </expando>
+    </div>
+  </body>
+</html>

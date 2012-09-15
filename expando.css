@@ -1,0 +1,65 @@
+/*
+ * Expando - jQuery Plugin
+ * Your text will grow on you!
+ *
+ * Copyright (c) 2012 Andrew Cantino
+ *
+ * Version: 0.1.0 (9/14/2012)
+ * Requires: jQuery, jQuery UI
+ *
+ * Licensed under the MIT License
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+.expando-region .expander,
+.expando-region .fake-expander {
+  cursor: pointer;
+  padding: 2px 0px;
+  color: #EF7A28;
+  -webkit-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+  text-decoration: none;
+}
+
+.expando-region a.expander:hover,
+.expando-region a.fake-expander:hover {
+  -webkit-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+  background-color: #ececec;
+  text-decoration: none;
+}
+
+.expando-region a.external {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.expando-region a.external:visited {
+  color: inherit;
+}
+
+.expando-region .break {
+  margin-bottom: 0px;
+}
+
+@media print {
+  .expando-region a.expander:hover,
+  .expando-region a.fake-expander:hover {
+    color: #EF7A28 !important;
+  }
+
+  .expando-region .expanded,
+  .expando-region expanded {
+    display: inline !important;
+  }
+
+  .expando-region .initial,
+  .expando-region initial {
+    display: none !important;
+  }
+
+  .expando-region .break,
+  .expando-region break {
+    margin-bottom: 25px !important;
+  }
+}
