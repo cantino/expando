@@ -18,7 +18,7 @@
     if (!$(this).length) return this;
 
     if (options === "expandAll") {
-      $(this).find(".expander:not(.activated)").each(function() {
+      $(this).find(".expander:not(.activated), expander:not(.activated)").each(function() {
         $(this).expando("expand");
       });
     } else if (options === "expand") {

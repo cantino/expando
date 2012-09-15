@@ -78,14 +78,6 @@ You can add `<div class='break'></div>` to create line breaks that expand with t
       </expanded>
     </expando>
 
-# Events and programmatic control
-
-Expanded blocks trigger a jQuery `expando.expanded` event that you can bind to for custom behavior.
-
-You can programmatically expand an `expander` by calling `expando('expand')` on it, like so: `$(".about-me expander").expando('expand')`
-
-You can expand everything with: `$(".about-me").expando("expandAll")`
-
 # Customization
 
 Customize colors and spacing with options:
@@ -97,3 +89,24 @@ Customize colors and spacing with options:
       colorFadeTime: 2000, //ms
       breakOpenTime: 300 //ms
     });
+
+# Events and programmatic control
+
+Expanding blocks triggers a jQuery `expando.expanded` event that you can bind to for custom behavior.
+
+    $(".about-me").bind("expando.expanded", function() {
+      expansionCount++;
+      if (expansionCount > 2) {
+        // Hide the explanation dialog
+      } else if (expansionCount > 6) {
+        // Offer to expand everything
+      }
+    });
+
+You can programmatically expand an `expander` by calling `expando('expand')` on it:
+
+    $(".about-me .expander.something").expando('expand')
+
+You can expand everything as well
+
+    $(".about-me").expando("expandAll")
