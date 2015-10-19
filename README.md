@@ -110,3 +110,8 @@ You can programmatically expand an `expander` by calling `expando('expand')` on 
 You can expand everything as well
 
     $(".about-me").expando("expandAll")
+
+
+`expando` is available over RawGit CDN:
+
+    <script src="//cdn.rawgit.com/cantino/expando/38affee59bffdd87975c492472362c69ce0f6fda/jquery.expando.js"></script>
